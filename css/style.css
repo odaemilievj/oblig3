@@ -12,7 +12,7 @@ body{
 
 #grid-container{
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, auto);
     grid-template-areas: "topp" "hovedomraade" "bunn";
 }
@@ -49,21 +49,57 @@ main{
     padding-top: 1rem;
 }
 
-#kategori1{
+#dame{
     display: inline-block;
-    width: 60px;
-    height: 50px;
-    padding: 1rem;
+    width: 140px;
+    height: 80px;
+    padding: 2rem;
     background-color:#d9d9d9;
-    color:aqua;
-    border-radius: 30%;
+    border-radius: 5%;
+    margin-left: 1rem;
 }
+
+#herre{
+    display: inline-block;
+    width: 140px;
+    height: 80px;
+    padding: 2rem;
+    background-color:#d9d9d9;
+    border-radius: 5%;
+    margin-left: 1rem;
+}
+
+#merker{
+    display: inline-block;
+    width: 140px;
+    height: 80px;
+    padding: 2rem;
+    background-color:#d9d9d9;
+    border-radius: 5%;
+    margin-left: 1rem;
+}
+
+#outlet{
+    display: inline-block;
+    width: 140px;
+    height: 80px;
+    padding: 2rem;
+    background-color:#d9d9d9;
+    border-radius: 5%;
+    margin-left: 1rem;
+}
+
 
 
 footer{
     background-color:#d9d9d9;
     grid-area: bunn;
 }
+
+#subscribe{
+    text-align: center;
+}
+
 
 
 #logo{
@@ -101,7 +137,7 @@ header nav ul{
 }
 
 .default-flex article{
-    flex-basis:33%;
+    flex-basis:33;
     min-width: 300px;
 }
 
