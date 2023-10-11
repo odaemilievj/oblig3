@@ -1,3 +1,136 @@
-html{
-    background-color: pink;
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0 auto;
+    max-width: 1400px;
+    width:100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#grid-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "topp" "hovedomraade" "bunn";
+}
+
+header{
+    grid-area: topp;
+}
+
+h1{
+    margin-bottom:0cap;
+    margin-top:0cap;
+}
+
+.produkttekst{
+    font-weight:200;
+    margin-top:-1rem;
+}
+
+.produktbilde{
+    padding:4rem;
+}
+
+p{
+    margin-top:0cap;
+}
+
+.logo-sko{
+    width: 100px;
+    height: auto;
+}
+
+main{
+    grid-area: hovedomraade;
+    padding-top: 1rem;
+}
+
+#kategori1{
+    display: inline-block;
+    width: 60px;
+    height: 50px;
+    padding: 1rem;
+    background-color:#d9d9d9;
+    color:aqua;
+    border-radius: 30%;
+}
+
+
+footer{
+    background-color:#d9d9d9;
+    grid-area: bunn;
+}
+
+
+#logo{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+}
+
+header{
+    justify-content: space-between;
+    align-items: baseline;
+
+}
+
+nav{
+    background-color: #d9d9d9;
+}
+
+
+header nav ul{
+    display: flex;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+.default-flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.default-flex h2{
+    flex-basis: 100%;
+}
+
+.default-flex article{
+    flex-basis:33%;
+    min-width: 300px;
+}
+
+.default-flex article img{
+    width: 100%;
+}
+
+@media only screen and (min-width:850px) {
+    #grid-container{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    header{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start:1;
+        grid-row-end:2;
+    }
+
+    main{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    footer{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
 }
