@@ -36,7 +36,7 @@ header nav ul{
 
 
 
-/* Dette er flex*/
+/* Dette er flex på index-siden*/
 .default-flex{
     display: flex;
     flex-wrap: wrap;
@@ -65,4 +65,73 @@ header nav ul{
 .default-flex2 article{
     flex-basis: 33;
     min-width: 300px;
+}
+
+
+/*Dette er grid på index-siden*/
+#grid-container{
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: repeat(4, auto);
+grid-template-areas: "topp" 
+                    "hovedomraade" 
+                    "bunn";
+}
+
+
+header{
+    grid-area: topp;
+}
+
+main{
+    grid-area: hovedomraade;
+}
+
+footer{
+    grid-area: bunn;
+}
+
+
+/*Dette er media queries for desktop*/
+@media only screen and (min-width: 850px){
+    #grid-container{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    header{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    main{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-column-end: 4;
+    }
+
+    main h1{
+        text-align: center;
+    }
+
+    main h3{
+        text-align: center;
+    }
+
+    main h2{
+        text-align: center;
+    }
+
+    main p{
+        text-align: center;
+    }
+
+    footer{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
 }
