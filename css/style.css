@@ -134,10 +134,11 @@ header nav ul{
 
 .default-flex h2{
     flex-basis: 100%;
+    flex-wrap: wrap;
 }
 
 .default-flex article{
-    flex-basis:33;
+    flex-basis:33%;
     min-width: 300px;
 }
 
