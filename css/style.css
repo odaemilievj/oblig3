@@ -14,12 +14,26 @@ body{
     color: #403D39;
 }
 
+/*Dette er bilde på hjemskjermen*/
+.bilde-hjem{
+    display:block;
+    margin:0 auto
+}
+
+/*Dette er bilde på produkt og kundeservicesiden*/
+img{
+    display:block;
+    margin:0 auto;
+}
+/*Dette er logo i header*/
 #logo{
     text-decoration: none;
     font-size: 18px;
     font-weight: 600;
     color: #ccc5b9;
+    margin: 0px;
 }
+
 
 header{
     display: flex;
@@ -27,14 +41,118 @@ header{
     align-items: baseline;
 }
 
+#icon-placement{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .ikoner1{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    margin-left: 10px;
+    padding: 0;
+  }
+
+  .ikoner2{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    padding-left: 90px;
+}
+
+  
+  .ikoner1 li{
+    margin-right: 10px;
+  }
+
+  .ikoner2 li{
+    margin-right: 10px;
+  }
+
+
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 header nav ul{
     display: flex;
     gap: 0.5rem;
     list-style: none;
+    flex-wrap:wrap;
+}
+
+/*Dette er logo-bildet*/
+.bilde-logo{
+    width: 109px;
+    height: 97px;
+}
+
+/*Dette er teksten og slogan på hjemsiden*/
+#SoleMate{
+    text-align: center;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: 600;
+    margin: 0px;
+    letter-spacing: 5px;
+}
+
+#slogan{
+    text-align: center;
+    margin-top: 0px;
 }
 
 
+/*Dette er kategoriboksene*/
+#dame{
+    background-color: #CCC5B9;
+    height: 420px;
+    margin-bottom: auto;
+    padding-bottom: 10px;
+    text-decoration: none;
+    color:#FFFCF2;
+}
 
+#herre{
+    background-color: #CCC5B9;
+    height: 420px;
+    margin-bottom: auto;
+    padding-bottom: 10px;
+    text-decoration: none;
+    color:#FFFCF2;
+}
+
+#merker{
+    background-color: #CCC5B9;
+    height: 150px;
+    width: 150;
+    margin-bottom: auto;
+    padding-bottom: 10px;
+    text-decoration: none;
+    color:#FFFCF2;
+}
+
+#outlet{
+    background-color: #CCC5B9;
+    height: 600px;
+    margin-bottom: auto;
+    padding-bottom: 10px;
+    text-decoration: none;
+    color:#FFFCF2;
+}
+
+/*Dette er kundeklubb-bildet på forside*/
+#bilde-kundeklubb{
+    width: 109px;
+    height: 97px;
+}
 
 /* Dette er flex på index-siden*/
 .default-flex{
@@ -71,10 +189,10 @@ header nav ul{
 /*Dette er grid på index-siden*/
 #grid-container{
 display: grid;
-grid-template-columns: 1fr;
+grid-template-columns: 1 fr;
 grid-template-rows: repeat(4, auto);
-grid-template-areas: "topp" 
-                    "hovedomraade" 
+grid-template-areas: "topp"
+                    "hovedomraade"
                     "bunn";
 }
 
@@ -92,6 +210,8 @@ footer{
 }
 
 
+
+
 /*Dette er media queries for desktop*/
 @media only screen and (min-width: 850px){
     #grid-container{
@@ -103,6 +223,11 @@ footer{
         grid-column-end: 4;
         grid-row-start: 1;
         grid-row-end: 2;
+    }
+
+    /*Dette er for å få meny og søkeikonene til å tilpasses skjermstørrelsen*/
+    nav ul li{
+        padding-right: 30px;
     }
 
     main{
