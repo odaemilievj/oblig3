@@ -197,6 +197,10 @@ a{
     color: #403D39;
 }
 
+#cred{
+    text-align: center;
+}
+
 /*Dette gjelder kun på produkt-siden*/
 #produktnavn{
     margin-top: 60px;
@@ -402,5 +406,6 @@ button{
         align-self: start;
         margin-left: 20px;
       }
+
 
 }    
